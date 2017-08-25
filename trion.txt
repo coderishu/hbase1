@@ -1,0 +1,23 @@
+1) A NoSQL (originally referring to "non SQL" or "non relational") database provides a mechanism for storage and retrieval of data that
+ is modeled in means other than the tabular relations used in relational databases. ... NoSQL databases are increasingly used in big 
+ data and real-time web applications.
+ 
+2) Graph stores are used to store information about networks of data, such as social connections. Graph stores include Neo4J and Giraph. 
+Key-value stores are the simplest NoSQL databases. Every single item in the database is stored as an attribute name (or 'key'), together with its value.
+
+3)  Column families are the base storage mechanism in HBase.   A HBase table is comprised of one or more column families,  each of which is stored in a 
+separate set of regionfiles sharing a common key.To express it in terms of an RDBMS, a column family is roughly analogous to a RDBMS table with the rowkey
+ as a clustered primary key index.A HBase table would then be a view which does a full outer join on a set of RDBMS tables which all share the same primary
+ key (thus having a 1:1 relationship).    In this analogy, HBase region files map to pages in an RDBMS.
+ 
+ 4)  There is no hard limit to number of columns in HBase , we can have more than 1 million columns but usually three column families are recommended 
+ ( not more than three).If you are using something like Elastic search or Solr for indexing data, it doesn't make much difference to me.
+ try not to have join like operations between different tables . HBase will be not giving good performance for such type of queries.
+ 
+ 5) HBase is designed to manage tables with billions of rows and millions of columns.
+HBase data model consists of tables containing rows. Data is organized into column families grouping columns in each row
+
+6)  NoSQL databases are designed for scalability where unstructured data is spread across multiple nodes. When data volumes increase you 
+just need to add another node to accommodate the growth. The lack of structure in NoSQL databases relaxes stringent requirements of consistency
+ enforced in relational databases to improve speed and agility. 
+ 
